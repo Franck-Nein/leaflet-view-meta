@@ -110,13 +110,13 @@ L.Control.ViewMeta = L.Control.extend({
         this.eb_e.innerText = ebStr;
         this.wb_e.innerText = wbStr;
 
-        this.urlParams.set("lat", latStr);
-        this.urlParams.set("lng", lngStr);
+        this.urlParams.set("lat", latStr.replace(",",""));
+        this.urlParams.set("lng", lngStr.replace(",",""));
 
-        this.urlParams.set("nb", nbStr);
-        this.urlParams.set("sb", sbStr);
-        this.urlParams.set("eb", ebStr);
-        this.urlParams.set("wb", wbStr);
+        this.urlParams.set("nb", nbStr.replace(",",""));
+        this.urlParams.set("sb", sbStr.replace(",",""));
+        this.urlParams.set("eb", ebStr.replace(",",""));
+        this.urlParams.set("wb", wbStr.replace(",",""));
 
         window.history.replaceState(
             {},
